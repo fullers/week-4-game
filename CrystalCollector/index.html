@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Collector</title>
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
+  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper" class="container">
+<header class="row">
+    <div class="col-md-2">
+	<figure id="fig-title" class="well well-sm text-center"><h3>CrystalsCollector!</h3></figure>
+	</div>
+</header>
+<section class="row">
+	<div class="col-md-4">
+	<figure id="fig-rules" class="alert alert-warning">
+		<p>You will be given a random number at the start of the game.</p>
+		<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+		<p>You win the game by matching your total score to the random number, you loos the game if your total score goes above the random number.</p>
+		<p>The value of each crystal is hidden from you until you click on it.</p>
+		<p>Each time when the game starts, the game will change the values of each crystal</p>
+	</figure>
+	</div>	
+</section>
+
+<section class="row">
+	<div class="col-md-3">
+	<figure id="fig-randomNum" class="col-md-6">39
+		
+	</figure>
+	<figure id="fig-score" class="col-md-6 text-center">
+		<div id="wins">Wins: 0</div>
+		<div id="loses">Loses: 0</div>
+	</figure>
+	</div>
+</section>
+<section class="row">
+	<div class="col-md-12">
+		<button id="button1" class="btn btn-default btn-lg">
+		<img src="assets/images/redcrystal-50-50.png">
+		</button>
+		<button id="button2" class="btn btn-default btn-lg">
+		<img src="assets/images/bluecrystal-50-50.png">
+		<button id="button3" class="btn btn-default btn-lg">
+		<img src="assets/images/yellowcrystal-50-50.png">
+		<button id="button4" class="btn btn-default btn-lg">
+		<img src="assets/images/greencrystal-50-50.png">
+	</div>	
+</section>
+<section class="row">
+	<div class="col-md-2">
+	<figure id="fig-totalscoretxt">
+		Your total score is:
+	</figure>
+	<figure id="fig-totalscore">0
+	</figure>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <!-- End of Container-->
+  <script src="assets/Javascript/game.js"></script>
+  <script src="assets/Javascript/bootstrap.min.js"></script>
+</body>
+</html>

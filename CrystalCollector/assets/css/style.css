@@ -1,0 +1,40 @@
+#wrapper {
+	
+	border: 1px #000000 solid;
+}
+.well {
+
+	background: brown !important;
+	color: #ffffff;
+}
+#fig-rules {
+	font-size: 16px;
+	font-family: Comic-Sans cursive;
+	font-weight: bold;
+	color: green;
+}
+
+#fig-randomNum {
+	background: green;
+	color: #000000; 
+	font-size: 25px;
+	height: 100px;
+}
+#fig-score {
+	background: blue;
+	color: #ffffff; 
+	font-size: 16px;
+	height: 100px;
+}
+
+#fig-totalscoretxt {
+	background: green;
+	color: #ffffff;
+}
+
+#fig-totalscore {
+	background: green;
+	color: #ffffff;
+	font-size: 25px;
+
+}
