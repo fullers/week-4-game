@@ -5,8 +5,8 @@ $(document).ready(function(){
 
 	var randomNum;
 	var number;
-	var wins;
- 	var loses;
+	var wins = 0;
+ 	var loses = 0;
  	var buttonNum = [];
  	var totalScore = 0;
  	var firstNumber = 0;
@@ -14,6 +14,7 @@ $(document).ready(function(){
  	var thirdNumber = 0;
  	var fourthNumber = 0;
  	var score;
+
 
 // Function to create a random number by passing parameter
 
@@ -44,6 +45,29 @@ function setButtonNum () {
 	$('#button3').val(buttonNum[2]);
 	$('#button4').val(buttonNum[3]);
 }
+
+//Functions to set default Wins and Loses
+function setDWL () {
+	$('#wins').text(wins);
+	$('#loses').text(loses);
+}
+
+function clear() {
+	$('#randomNum').empty();
+	$('#totalScore').empty();
+	buttonNum = [];
+	totalScore = 0;
+}
+
+//Resets the Random Number and numbers for the buttons
+function reset() {
+	clear();
+	setRandNum();
+	setButtonNum();
+}
+
+$('#wins').text("Wins: " + wins);
+$('#loses').text("Loses: " + loses);
 
 //On Click Functions
 //Setting variables firstNumber, secondNumber, thirdNumber, fourthNumber to the array values so I can track each number indvidually for the total score.
@@ -80,16 +104,24 @@ $('.number').on('click', function() {
 	console.log("-----")
 	console.log($(this).val());
 	console.log(firstNumber,secondNumber,thirdNumber,fourthNumber);
-});
 
-// Function to keep track of the wins and loses
+// If statements to keep track of the wins and loses
+if (totalScore === randomNum) {
+	wins++;
+	$('#wins').text("Wins: " + wins);
+	clear();
+} 
 
-
-
-function reset(){
-setRandNum();
-setButtonNum();
+if (totalScore > randomNum) {
+	loses++;
+	$('#loses').text("Loses" + loses);
+	clear();
+	// console.log("Total Score:" + totalScore);
+	// console.log("Randum Number:" + randNum);
 }
+
+
+});
 
 reset();
 })
