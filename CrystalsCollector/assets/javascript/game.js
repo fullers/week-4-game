@@ -1,6 +1,8 @@
 // Javascript function that wraps everything
 $(document).ready(function(){ 
 	
+	// Declaring global variables
+
 	var randomNum;
 	var number;
 	var wins;
@@ -13,11 +15,14 @@ $(document).ready(function(){
  	var fourthNumber = 0;
  	var score;
 
+// Function to create a random number by passing parameter
+
 function genNum(min, max) {
 
 	number = Math.floor(Math.random()*(max - min + 1) + min)
 }
 
+// Function to the Random Number for the user to match, also sets the html to display the number 
 function setRandNum () {
 	genNum(9,120);
 	randomNum = number;
@@ -25,13 +30,13 @@ function setRandNum () {
 	console.log (randomNum);
 }
 
-
+// Function to the Random Number to an array for the user based on the button clicked, also sets the html to display the number 
 function setButtonNum () {
 
 	for (var i=0; i < 4; i++) {
 	genNum(1,12);
 	buttonNum[i] = number;
-	console.log(buttonNum[i]);
+	//console.log(buttonNum[i]);
 	}
 
 	$('#button1').val(buttonNum[0]);
@@ -40,10 +45,8 @@ function setButtonNum () {
 	$('#button4').val(buttonNum[3]);
 }
 
-function math(w,x,y,z) {
-	score = parseInt(w) + parseInt(x) + parseInt(y) + parseInt(z);
-	totalScore = score;
-}
+//On Click Functions
+//Setting variables firstNumber, secondNumber, thirdNumber, fourthNumber to the array values so I can track each number indvidually for the total score.
 
 $('#button1').on('click', function(event) {
 
@@ -53,35 +56,33 @@ $('#button1').on('click', function(event) {
 $('#button2').on('click', function(event) {
 
 	secondNumber = buttonNum[1];
-	// $('#total').text(totalScore);
+	
 });
 
 $('#button3').on('click', function(event) {
 
 	thirdNumber = buttonNum[2];
-	// $('#total').text(totalScore);
+	
 });
 
 $('#button4').on('click', function(event) {
 
 	fourthNumber = buttonNum[3];
-	// $('#total').text(totalScore);
+	
 });
 
 $('.number').on('click', function() {
-	if (firstNumber !== 0 || secondNumber !==0 || thirdNumber !=0 || fourthNumber !== 0) {
-
-		totalscore = math(firstNumber,secondNumber,thirdNumber,fourthNumber);
-	} 
-	else {
-		totalScore = 0;
-	}
+	
+	totalScore += parseInt($(this).val());
+		
 	$('#total').text(totalScore);
+
+	console.log("-----")
+	console.log($(this).val());
 	console.log(firstNumber,secondNumber,thirdNumber,fourthNumber);
 });
 
-
-
+// Function to keep track of the wins and loses
 
 
 
