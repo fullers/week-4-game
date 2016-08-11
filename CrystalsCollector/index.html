@@ -9,6 +9,7 @@
   
   <!-- Bootstrap File -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
@@ -19,13 +20,13 @@
 <div id="wrapper" class="container"> <!-- Main Container -->
 
 <header class="row"> <!-- Title -->
-    <div class="col-md-2">
-	<figure id="fig-title" class="well well-sm text-center"><h3>CrystalsCollector!</h3></figure>
+    <div class="col-md-3">
+	<figure id="fig-title" class="well"><h3>CrystalsCollector!</h3></figure>
 	</div>
 </header>
 
 <section class="row"> <!-- Rules -->
-	<div class="col-md-4">
+	<div class="col-md-5">
 	<figure id="fig-rules" class="alert alert-warning">
 		<p>You will be given a random number at the start of the game.</p>
 		<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -37,14 +38,14 @@
 </section>
 
 <section class="row"> <!-- Random Number -->
-	<div class="col-md-3">
-	<figure id="fig-randomNum" class="col-md-6"><div id="randNum"></div>
-		
-	</figure>
-	<figure id="fig-score" class="col-md-6 text-center">
-		<div id="wins"></div>
-		<div id="loses"></div>
-	</figure>
+	<div class="col-md-8">
+		<figure id="fig-randomNum" class="col-md-3"><div id="randNum"></div>
+		</figure>
+		<figure id="fig-score" class="col-md-2 text-center">
+			<div id="wltxt"></div>
+			<div id="wins"></div>
+			<div id="loses"></div>
+		</figure>
 	</div>
 </section>
 
@@ -63,13 +64,22 @@
 </section>
 
 <section class="row"> <!-- Total Score Area -->
-	<div class="col-md-2">
-	<figure id="fig-totalscoretxt">
+	<div class="col-md-3">
+	<!-- <figure id="fig-totalscoretxt">
 		Your total score is:
 	</figure>
 	<figure id="fig-totalscore"><div id="total">0</div>
-	</figure>
+	</figure> -->	
+	<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Your total score is:</h3>
+  </div>
+  <div class="panel-body">
+    <div id="total">0</div>
+  </div>
+</div>
 	</div>
+
 </section>
 
 </div> <!-- End of Main Container-->

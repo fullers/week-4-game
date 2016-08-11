@@ -1,35 +1,45 @@
 #wrapper {
 	
-	border: 1px #000000 solid;
+	border: 1px #ffffff solid;
 }
 .well {
 
-	background: brown !important;
-	color: #ffffff;
+	background: #33AFFF !important;
+	color: #ffffff !important;
+	opacity: 0.5;
 }
+.panel .panel-body {
+	font-size: 25px;
+}
+
 #fig-rules {
 	font-size: 16px;
 	font-family: Comic-Sans cursive;
 	font-weight: bold;
-	color: green;
+	color: #ffffff;
+	margin-top: 10px;
+
 }
 
 #fig-randomNum {
-	background: green;
+	background: #37E91B;
 	color: #000000; 
 	font-size: 25px;
 	height: 100px;
+	margin-right: 10px;
 }
 #fig-score {
-	background: blue;
+	background: #33AFFF;
 	color: #ffffff; 
 	font-size: 16px;
 	height: 100px;
+	margin-bottom: 10px;
 }
 
 #fig-totalscoretxt {
 	background: green;
 	color: #ffffff;
+	font-size: 25px;
 }
 
 #fig-totalscore {

@@ -56,7 +56,6 @@ function clear() {
 	$('#randomNum').empty();
 	$('#totalScore').empty();
 	buttonNum = [];
-	totalScore = 0;
 }
 
 //Resets the Random Number and numbers for the buttons
@@ -108,14 +107,21 @@ $('.number').on('click', function() {
 // If statements to keep track of the wins and loses
 if (totalScore === randomNum) {
 	wins++;
+	$('#wltxt').text("You Win!");
 	$('#wins').text("Wins: " + wins);
-	clear();
+	$('#total').text(0);
+	console.log("Wins: " + wins);
+	reset();
 } 
 
 if (totalScore > randomNum) {
 	loses++;
-	$('#loses').text("Loses" + loses);
-	clear();
+	$('#wltxt').text("You Lost!");
+	$('#loses').text("Loses: " + loses);
+	$('#total').text(0);
+	console.log("Lost: " + loses);
+	reset();
+	
 	// console.log("Total Score:" + totalScore);
 	// console.log("Randum Number:" + randNum);
 }
@@ -123,5 +129,7 @@ if (totalScore > randomNum) {
 
 });
 
+
+//Run Game
 reset();
-})
+});
