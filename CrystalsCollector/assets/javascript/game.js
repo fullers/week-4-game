@@ -27,7 +27,7 @@ function setRandNum () {
 	genNum(9,120);
 	randomNum = number;
 	$('#randNum').text(randomNum)
-	console.log (randomNum);
+	// console.log (randomNum);
 }
 
 // Function to the Random Number to an array for the user based on the button clicked, also sets the html to display the number 
@@ -99,9 +99,9 @@ $('.number').on('click', function() {
 		
 	$('#total').text(totalScore);
 
-	console.log("-----")
-	console.log($(this).val());
-	console.log(firstNumber,secondNumber,thirdNumber,fourthNumber);
+	// console.log("-----")
+	// console.log($(this).val());
+	// console.log(firstNumber,secondNumber,thirdNumber,fourthNumber);
 
 // If statements to keep track of the wins and loses
 if (totalScore === randomNum) {
@@ -109,7 +109,7 @@ if (totalScore === randomNum) {
 	$('#wltxt').text("You Win!");
 	$('#wins').text("Wins: " + wins);
 	$('#total').text(0);
-	console.log("Wins: " + wins);
+	//console.log("Wins: " + wins);
 	reset();
 } 
 
@@ -118,7 +118,7 @@ if (totalScore > randomNum) {
 	$('#wltxt').text("You Lost!");
 	$('#loses').text("Loses: " + loses);
 	$('#total').text(0);
-	console.log("Lost: " + loses);
+	//console.log("Lost: " + loses);
 	reset();
 	
 	// console.log("Total Score:" + totalScore);
