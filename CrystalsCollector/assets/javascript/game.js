@@ -15,7 +15,6 @@ $(document).ready(function(){
  	var fourthNumber = 0;
  	var score;
 
-
 // Function to create a random number by passing parameter
 
 function genNum(min, max) {
@@ -126,9 +125,7 @@ if (totalScore > randomNum) {
 	// console.log("Randum Number:" + randNum);
 }
 
-
 });
-
 
 //Run Game
 reset();
