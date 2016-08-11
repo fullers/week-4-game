@@ -1,1 +1,1 @@
-<?php include_once ("CrystalsCollector/index.html"); ?>
+<?php include_once ("index.html"); ?>
