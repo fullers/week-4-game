@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars</title>
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
+  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet"> -->
+  
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body> 
+<div id="b" class="container-fluid">
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="title"><h1>STAR WARS RPG!</h1></div>
+	</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+	<div id="players" class="col-md-8 col-sm-12 col-xs-12">
+	<div class="row">
+		<div id="charA" class="col-md-3 text-center">
+			<button class="btn btn-lg">
+			<div class="well">
+			<figure id="charAName" class="text-center">Yoda</figure>
+			<img class="img-responsive img-rounded" src="assets/images/yoda.png"><figure id="charAHP" class="text-center"></figure>
+			</div>
+			</button>
+		</div>  <!-- End div charA -->
+		<div id="charB" class="col-md-3 text-center">
+			<button class="btn btn-lg">
+			<div class="well">
+			<figure id="charBName" class="text-center">Luke Skywalker</figure>
+			<img class="img-responsive img-rounded" src="assets/images/lukeskywalker.png"><figure id="charBHP" class="text-center"></figure>
+			</div>
+			</button>
+		</div>  <!-- End div charB -->
+		<div id="charC" class="col-md-3 text-center">
+			<button class="btn btn-lg">
+			<div class="well">
+			<figure id="charCName" class="text-center">Darth Vader</figure>
+			<img class="img-responsive img-rounded" src="assets/images/darthvader.png"><figure id="charCHP" class="text-center"></figure>
+			</div>
+			</button>
+		</div>  <!-- End div charC -->
+		<div id="charD" class="col-md-3 text-center">
+			<button class="btn btn-lg">
+			<div class="well">
+			<figure id="charDName" class="text-center">Darth Maul</figure>
+			<img class="img-responsive img-rounded" src="assets/images/darthmaul.png"><figure id="charDHP" class="text-center"></figure>
+			</div>
+			</button>
+		</div>  <!-- End div charD -->
+		
+	</div>  <!-- end row-->
+	</div> <!-- Players -->
+</div>	
+	<div class="bodytxt"><h3>Your Character</h3></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+			<div id="charMove"></div>
+			</div>
+		</div>
+	</div>
+	<div class="bodytxt"><h3>Enemies Availabe to Attack</h3>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+			<div id="enemyMove"></div>
+			</div>
+		</div>
+	</div>
+	<div class="bodytxt"><h3>Fight Section</h3>
+	<button type="submit" id="attackbtn" class="btn btn-warning">Attack</button>
+	</div>
+	<div id="defender" class="bodytxt"><h3>Defender</h3>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+			<div id="defenderMove"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="statusarea"></div>
+</div>
+<!-- Calling javascript files -->
+  <script src="assets/javascript/game.js"></script>
+  <script src="assets/javascript/bootstrap.min.js"></script>
+</body>
+</html>
