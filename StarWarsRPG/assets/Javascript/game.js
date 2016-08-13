@@ -12,7 +12,7 @@ var charA = {
 		$('#charAImg').html('<img src="' + charA.imgsrc + '" />');
 		$('#charAHP').html(charA.hp);
 	}
-
+    
 }
 
 var charB = {
@@ -60,10 +60,52 @@ var charD = {
 
 }
 
+// Call to display the Name, Image, and HP for each character
 charA.show();
 charB.show();
 charC.show();
 charD.show();
 
+//On click functions
+$('#charA').on('click', function() {
+	
+$('#charA').detach().appendTo('#charMove');
+$('#charB').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charC').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charD').detach().appendTo('#enemyMove').addClass('enemy');
+
+});
+
+$('#charB').on('click', function() {
+	
+$('#charB').detach().appendTo('#charMove');
+$('#charA').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charC').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charD').detach().appendTo('#enemyMove').addClass('enemy');
+});
+
+$('#charC').on('click', function() {
+	
+$('#charC').detach().appendTo('#charMove');
+$('#charA').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charB').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charD').detach().appendTo('#enemyMove').addClass('enemy');
+});
+
+$('#charD').on('click', function() {
+	
+$('#charD').detach().appendTo('#charMove');
+$('#charA').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charB').detach().appendTo('#enemyMove').addClass('enemy');
+$('#charC').detach().appendTo('#enemyMove').addClass('enemy');
+});
+
+// $('.enemy').on('click', function(){
+
+// 	if ($(this).is('#charB')){
+// 		$('#enemyMove').detach().appendTo('#defenderMove').addClass('defender');
+// 	}
+
+// });
 
 });
