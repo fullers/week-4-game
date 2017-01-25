@@ -33,7 +33,7 @@ You may go to [http://fullers-week-4-game.herokuapp.com/CrystalsCollector/index.
 * Open the index.html in a browser.
 
 
-![Alt Text](CrystalCollector/assets/images/scrnshot-crystal.png?raw=true "Crystal Collector")
+![Alt Text](CrystalsCollector/assets/images/scrnshot-crystal.png?raw=true "Crystal Collector")
 
 
 
